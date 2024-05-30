@@ -16,7 +16,7 @@ from .logger import logger
 from .image_latent_nodes import *
 from .load_video_nodes import LoadVideoUpload, LoadVideoPath
 from .load_images_nodes import LoadImagesFromDirectoryUpload, LoadImagesFromDirectoryPath
-from .batched_nodes import VAEEncodeBatched, VAEDecodeBatched
+from .batched_nodes import VAEEncodeBatched, VAEDecodeBatched, RobinsNode
 from .utils import ffmpeg_path, get_audio, hash_path, validate_path, requeue_workflow, gifski_path, calculate_file_hash
 
 folder_paths.folder_names_and_paths["VHS_video_formats"] = (
@@ -758,6 +758,8 @@ NODE_CLASS_MAPPINGS = {
     # Batched Nodes
     "VHS_VAEEncodeBatched": VAEEncodeBatched,
     "VHS_VAEDecodeBatched": VAEDecodeBatched,
+
+    "Robin_FirstNode": RobinsNode,
 }
 NODE_DISPLAY_NAME_MAPPINGS = {
     "VHS_VideoCombine": "Video Combine 🎥🅥🅗🅢",
@@ -791,4 +793,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     # Batched Nodes
     "VHS_VAEEncodeBatched": "VAE Encode Batched 🎥🅥🅗🅢",
     "VHS_VAEDecodeBatched": "VAE Decode Batched 🎥🅥🅗🅢",
+    "Robin_FirstNode": "Robin's first node"
 }
